@@ -1,0 +1,13 @@
+$green: #1DA57A;
+$red: #d9534f;
+
+$rem_fontSize: 16;
+
+@function rem($px) {
+  @return ($px / $rem_fontSize) * 1rem;
+}
+
+
+body {
+  background-color: $green;
+}
