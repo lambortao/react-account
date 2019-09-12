@@ -5,11 +5,10 @@
 
   .plan-list {
     width: 100%;
-    height: 10vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 6vw;
+    padding: 6vw;
     background-color: #fff;
 
     .plan {
@@ -68,17 +67,19 @@
   }
 
   .bill-box {
-
+    
     .bill-title {
       width: 100%;
+      height: 4vh;
+      padding: 0 3vw;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       color: #fff;
       font-weight: bold;
       font-size: rem(12);
       line-height: 1em;
-      padding: 3vw;
-      border-bottom: 1px solid rgba($color: #f5f5f5, $alpha: 0.2);
+      background-color: $green;
     }
     .bill-list {
       padding: 6vw;
@@ -86,11 +87,14 @@
     .single-bill {
       width: 100%;
       height: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       border-radius: 2px;
       background-color: #fff;
+      border: 1px solid rgba($color: $green, $alpha: 0.3);
+      border-radius: 3px;
       position: relative;
       padding: 0 15px 0 20px;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -100,13 +104,26 @@
         width: 24px;
         height: 24px;
         border-radius: 12px;
-        background-color: $green;
-        border: 1px solid rgba($color: #f5f5f5, $alpha: 0.5);
-        top: -10px;
-        left: -10px;
+        background-color: #f5f5f5;
+        border: 1px solid rgba($color: $green, $alpha: 0.5);
+        top: -5px;
+        left: -15px;
       }
 
-      font-size: rem(13);
+      .left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        div {
+          margin-right: 10px;
+        }
+        .time {
+          letter-spacing: 0;
+        }
+      }
+
+      font-size: rem(12);
       font-weight: bold;
       color: $green;
       letter-spacing: 1px;
@@ -114,18 +131,18 @@
   }
 
   .add {
-    width: 16vw;
-    height: 16vw;
-    border-radius: 8vw;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 6vw;
     background-color: #fff;
     position: fixed;
-    left: 42vw;
+    left: 44vw;
     bottom: 20px;
     padding: 10px;
     background: {
       color: #fff;
       image: url('../../images/add.png');
-      size: 10vw;
+      size: 6vw;
       position: center;
       repeat: no-repeat;
     }

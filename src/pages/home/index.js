@@ -22,7 +22,10 @@ function SingleBill(props) {
   return (
     <div className='single-bill'>
       <span className="head"></span>
-      <div className="classify">{props.classify}</div>
+      <div className="left">
+        <div className="classify">{props.classify}</div>
+        <div className="time">{props.time}</div>
+      </div>
       <div className="how-money">{props.howMoney}</div>
     </div>
   )
@@ -31,141 +34,174 @@ function SingleBill(props) {
 // 主页面
 function Home () {
   const [monthPlan, setMonthPlan] = useState(10000);
-  const [monthCost, setMouthCost] = useState(1600);
+  const [monthCost, setMouthCost] = useState(1000);
   const [monthFixed, setMonthFixed] = useState(3000);
   const [billArr, setBill] = useState([
     {
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },
     {
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     },{
       who: 1,
       classify: '测试',
+      time: '15:33',
       howMoney: 300.5
     }
   ])
@@ -189,6 +225,7 @@ function Home () {
             billArr.map((item, index) => 
               <SingleBill
                 key={index}
+                time={item.time}
                 classify={item.classify}
                 howMoney={item.howMoney}
               ></SingleBill>
